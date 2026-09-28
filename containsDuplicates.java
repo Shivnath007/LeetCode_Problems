@@ -17,7 +17,7 @@ public class containsDuplicates {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 2, 2, 5, 1, 6, 8, 5, 6, 4, 5 };
+        int[] arr = { 2, 0, 5, 1, 6, 8, 7, 9, 4, 10 };
 
         if (containsDuplicate(arr)) {
             System.out.println("Contains duplicate.");
