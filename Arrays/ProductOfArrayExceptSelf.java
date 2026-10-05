@@ -3,20 +3,21 @@ package Arrays;
 public class ProductOfArrayExceptSelf {
     
     public int[] productExceptSelf(int [] nums) {
-        int n = nums.length;
-        int[] result = new int[n];
         int leftProduct = 1;
         int rightProduct = 1;
-
-        for(int i  = 0; i < n; i++) {
-            result[i] = leftProduct;
-            leftProduct *= nums[i];
+        int[] answer = new int[nums.length];
+        // prefixProduct logic
+        for(int i  = 0; i < nums.length; i++) {
+            int current = nums[i];
+            answer[i] = leftProduct;
+            leftProduct *= current;
         }
-        for(int i = n - 1; i >= 0; i--) {
-            result[i] *= rightProduct;
+        // suffixProduct logic
+        for(int i = nums.length - 1; i >= 0; i--) {
+            answer[i] *= rightProduct;
             rightProduct *= nums[i];
         }
-        return result;
+        return answer;
     }
 
     public static void main(String[] args) {
