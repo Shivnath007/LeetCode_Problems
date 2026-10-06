@@ -2,6 +2,8 @@ package Arrays;
 
 public class PrefixSum {
 
+    // #leetcode 167
+    
     public int[] prefixSum(int[] arr) {
         int [] prefixSum = new int[arr.length];
         prefixSum[0] = arr[0];
